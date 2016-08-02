@@ -20,7 +20,7 @@ part of the problem."  - (Reenskaug,T, 1979)
 
 
 Declare our empty concrete entity to capture the state. We represent the concrete
- entity as an empty array. By using an array we can store all Todo Tasks 
+entity as an empty array. By using an array we can store all Todo Tasks 
 individually and any associated or inherited procedures.
 
 ```
@@ -30,23 +30,27 @@ function TodoList(){
 ```
 
 When Tasks are entered, use the following procedure to initiate an object.
-The object takes the following Task and captures it as an Obj. The Obj is then
+The object takes the following Task and captures it as an `Obj`. The `Obj` is then
 passed onto the concrete entity TodoList above. We can use the prototype method
 to do just that.
+
 ```
 TodoList.prototype.addTaskToList = function( obj ){
   return this.TodoList.push( obj );
 };
+
 ```
 We have a simple removeAt procedure. This is used for when Todo Tasks may 
 be selected in order to delete. The following procedure returns the 
 concrete entity array and splices the index of the item. The index is assigned
-using a simple indexOf procedure below.
+using a simple `indexOf` procedure below.
+
  ```
 TodoList.prototype.removeAt = function( index ){
   this.TodoList.splice( index, 1 );
 };
 ```
+
 Next we have a count prototype procedure that simply keeps track of 
 all objects (Todo Tasks) created and stored into our inherited concrete entity.
 
@@ -56,9 +60,9 @@ TodoList.prototype.count = function(){
 };
 ```
 
-Our 'indexOf' prototype is for identifying our list and designating their 
+Our `indexOf` prototype is for identifying our list and designating their 
 index numbers. This is mainly for keeping track of all objects (Todo Tasks). 
-Simply assigns unique ids ( 1 - n).
+Simply assigns unique ids `(1 - n)`.
 
 ```
 TodoList.prototype.indexOf = function( obj, startIndex ){
@@ -80,8 +84,8 @@ it then translates the model behavior into the appropriate messages and passes
 these messages onto one or more of the view procedures below." - (Reenskaug,T, 1979)
 
 Declare our main controller which communicates with the output of the prior 
-model. We initiate a new version of the TodoList() and push it onto the view
-using inherited procedures of the Controller.
+model. We initiate a new version of the `TodoList()` and push it onto the view
+using inherited procedures of the `Controller`.
 
 ```
 function Controller(){
@@ -90,7 +94,7 @@ function Controller(){
 ```
 
 We define the first controller method. This is where users will be able 
-to see their inputted Todo Task be passed into the View entity below for 
+to see their inputted Todo Task be passed into the `View` entity below for 
 visually displaying the task.
 
 ```
@@ -128,7 +132,7 @@ view will therefore have to know the semantics of the attributes of the model it
 may, for example, ask for the model's identifier and expect an instance of Text, it may not
 assume that the model is of class Text.)" - (Reenskaug,T, 1979)
 
-We begin with a AddTodo procedure. We add each Todo and the extracted value as an `<li>` DOM
+We begin with a `AddTodo` procedure. We add each Todo and the extracted value as an `<li>` DOM
 element as we have a far more flexibility in manipulating the HTML. 
 
 ```
