@@ -1,10 +1,10 @@
-### ABOUT *
+### ABOUT
 
 A simple Todo List Application for the following Dissertation Project for student 150033255.
 Also, the application has been created in order to explore and learn more about the MVC pattern.
 
 
-### THE MODEL *
+### THE MODEL
 
 A core entity to represent the space for capturing Todo Tasks submitted by users.
 
@@ -73,7 +73,7 @@ TodoList.prototype.indexOf = function( obj, startIndex ){
 };
 ```
 
-### THE CONTROLLER *
+### THE CONTROLLER
 
 "The controller receives such user output via the concrete entity (Model), 
 it then translates the model behavior into the appropriate messages and passes 
@@ -119,7 +119,7 @@ function extend( obj, extension ){
 } 
 ```
 
-### THE VIEW *
+### THE VIEW
 
 "A view is attached to its model (or model part) and gets the data necessary for the presentation
 from the model by asking questions. It may also update the model by sending appropriate
