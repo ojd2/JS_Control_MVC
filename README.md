@@ -1,4 +1,4 @@
-## ABOUT
+# ABOUT
 
 A simple Todo List Application for the following Dissertation Project for student 150033255.
 Also, the application has been created in order to explore and learn more about the MVC pattern.
