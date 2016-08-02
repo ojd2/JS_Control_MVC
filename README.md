@@ -1,5 +1,3 @@
-/### 
-
 ### ABOUT *
 
 A simple Todo List Application for the following Dissertation Project for student 150033255.
